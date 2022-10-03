@@ -2,6 +2,7 @@
 <robot xmlns:xacro="http://ww.ros.org/wiki/xacro"  name="navvis">
 	<xacro:include filename="$(find gazebo_plugins)/test/multi_robot_scenario/xacro/laser/hokuyo.xacro" />
 	<xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
+	
 	<link name="base">
 		<visual>
 		<origin xyz = "0.0 0.0 .96" rpy = "0.0 0.0 0.0" />
@@ -24,7 +25,7 @@ meshes="package://gazebo_plugins/test/multi_robot_scenario/meshes/laser" />
 	<xacro:laser name="laser_vert_top_right" parent="base" xyz ="0.2978 -0.1450 1.8451"  rpy ="-1.1760 0.6313 -1.9377"
 meshes="package://gazebo_plugins/test/multi_robot_scenario/meshes/laser" />
 
-	<xacro:laser name="laser_vert_left" parent="base"  xyz="0.2997 0.1531 01.8443"  rpy ="1.1780 0.6198 1.8560"
+	<xacro:laser name="laser_vert_top_left" parent="base"  xyz="0.2997 0.1531 01.8443"  rpy ="1.1780 0.6198 1.8560"
 meshes="package://gazebo_plugins/test/multi_robot_scenario/meshes/laser" />
 
 	<xacro:VLP-16 parent="base" name="laser_horiz" topic="laser_horiz/packets" hz="10"
